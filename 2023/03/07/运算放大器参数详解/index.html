@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>运算放大器参数详解 | 马文龙的博客</title><meta name="author" content="Horse Dragon"><meta name="copyright" content="Horse Dragon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="​		运算放大器是基本电子元件，是每个电子&#x2F;硬件工程师都应该熟悉掌握的。此前一直停留在会利用运放设计电路的水平，其实运放的各种参数也是十分重要的，涉及到运放的选型，本文整理一下运放的相关参数。   一、单位增益带宽GB 单位增益带宽定义为：运放的闭环增益为1倍条件下，将一个恒幅正弦小信号输入到运放的输入端，从运放的输出端测得闭环电压增益下降3dB（或是相当于运放输入信号的0.707）所对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="运算放大器参数详解">
+<meta property="og:url" content="http://example.com/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:site_name" content="马文龙的博客">
+<meta property="og:description" content="​		运算放大器是基本电子元件，是每个电子&#x2F;硬件工程师都应该熟悉掌握的。此前一直停留在会利用运放设计电路的水平，其实运放的各种参数也是十分重要的，涉及到运放的选型，本文整理一下运放的相关参数。   一、单位增益带宽GB 单位增益带宽定义为：运放的闭环增益为1倍条件下，将一个恒幅正弦小信号输入到运放的输入端，从运放的输出端测得闭环电压增益下降3dB（或是相当于运放输入信号的0.707）所对">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2023-03-07T02:31:31.000Z">
+<meta property="article:modified_time" content="2023-03-07T03:27:22.059Z">
+<meta property="article:author" content="Horse Dragon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '运算放大器参数详解',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-07 11:27:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/20230228212217.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 存档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="马文龙的博客"><span class="site-name">马文龙的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 存档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">运算放大器参数详解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-03-07T02:31:31.000Z" title="Created 2023-03-07 10:31:31">2023-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-03-07T03:27:22.059Z" title="Updated 2023-03-07 11:27:22">2023-03-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="运算放大器参数详解"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>​		运算放大器是基本电子元件，是每个电子&#x2F;硬件工程师都应该熟悉掌握的。此前一直停留在会利用运放设计电路的水平，其实运放的各种参数也是十分重要的，涉及到运放的选型，本文整理一下运放的相关参数。</p>
+<p><img src="/../images/OIP.jpg" alt="OIP"></p>
+<p><img src="/../images/1OIP.jpg" alt="1OIP"></p>
+<p><strong>一、单位增益带宽GB</strong></p>
+<p><strong>单位增益带宽定义为：</strong>运放的闭环增益为1倍条件下，将一个恒幅正弦小信号输入到运放的输入端，从运放的输出端测得闭环电压增益下降3dB（或是相当于运放输入信号的0.707）所对应的信号频率。单位增益带宽是一个很重要的指标，对于正弦小信号放大时，单位增益带宽等于输入信号频率与该频率下的最大增益的乘积，换句话说，就是当知道要处理的信号频率和信号需要的增益后，可以计算出单位增益带宽，用以选择合适的运放。这用于小信号处理中运放选型。</p>
+<p><strong>二、运放的带宽是表示运放能够处理交流信号的能力</strong></p>
+<p>​		对于小信号，一般用单位增益带宽表示。单位增益带宽，也叫做增益带宽积，能够大致表示运放的处理信号频率的能力。例如某个运放的增益带宽&#x3D;1MHz，若实际闭环增益&#x3D;100，则理论处理小信号的最大频率1MHz&#x2F;100&#x3D;10KHz。对于大信号的带宽，即功率带宽，需要根据转换速度来计算。对于直流信号，一般不需要考虑带宽问题，主要考虑精度问题和干扰问题。</p>
+<p>1、运放的带宽简单来说就是用来衡量一个放大器能处理的信号的频率范围，带宽越高，能处理的信号频率越高，高频特性就越好，否则信号就容易失真，不过这是针对小信号来说的，在大信号时一般用压摆率（或者叫转换速率）来衡量。</p>
+<p>2、比如说一个放大器的放大倍数为n倍，但并不是说对所有输入信号的放大能力都是n倍，当信号频率增大时，放大能力就会下降，当输出信号下降到原来输出的0.707倍时，也就是根号2分之一，或者叫减小了3dB，这时候信号的频率就叫做运放的带宽 。</p>
+<p>3、当输出信号幅度很小在0.1Vp-p以下时，主要考虑增益带宽积的影响。就是Gain Bandwidth&#x3D;放大倍数*信号频率。当输出信号幅度很大时，主要考虑转换速率Sr的影响，单位是V&#x2F;uS。在这种情况下要算功率带宽，FPBW&#x3D;Sr&#x2F;2πVp-p。也就是在设计电路时要同时满足增益带宽和功率带宽。</p>
+<p><strong>三、运放关于带宽和增益的主要指标以及定义</strong></p>
+<p>1、<strong>开环带宽：</strong>开环带宽定义为，将一个恒幅正弦小信号输入到运放的输入端，从运放的输出端测得开环电压增益从运放的直流增益下降3db（或是相当于运放的直流增益的0.707）所对应的信号频率。这用于很小信号处理。</p>
+<p>2、<strong>转换速率（也称为压摆率）SR：</strong>运放转换速率定义为，运放接成闭环条件下，将一个大信号（含阶跃信号）输入到运放的输入端，从运放的输出端测得运放的输出上升速率。由于在转换期间，运放的输入级处于开关状态，所以运放的反馈回路不起作用，也就是转换速率与闭环增益无关。转换速率对于大信号处理是一个很重要的指标，对于一般运放转换速率SR&lt;&#x3D;10V&#x2F;μs，高速运放的转换速率SR&gt;10V&#x2F;μs。目前的高速运放最高转换速率SR达到6000V&#x2F;μs。这用于大信号处理中运放选型。</p>
+<p>3、<strong>全功率带宽BW：</strong>全功率带宽定义为，在额定的负载时，运放的闭环增益为1倍条件下，将一个恒幅正弦大信号输入到运放的输入端，使运放输出幅度达到最大（允许一定失真）的信号频率。这个频率受到运放转换速率的限制。近似地，全功率带宽&#x3D;转换速率&#x2F;2πVop（Vop是运放的峰值输出幅度）。全功率带宽是一个很重要的指标，用于大信号处理中运放选型</p>
+<p>4、<strong>建立时间：</strong>建立时间定义为，在额定的负载时，运放的闭环增益为1倍条件下，将一个阶跃大信号输入到运放的输入端，使运放输出由0增加到某一给定值的所需要的时间。由于是阶跃大信号输入，输出信号达到给定值后会出现一定抖动，这个抖动时间称为稳定时间。稳定时间+上升时间&#x3D;建立时间。对于不同的输出精度，稳定时间有较大差别，精度越高，稳定时间越长。建立时间是一个很重要的指标，用于大信号处理中运放选型。</p>
+<p>5、<strong>等效输入噪声电压：</strong>等效输入噪声电压定义为，屏蔽良好、无信号输入的的运放，在其输出端产生的任何交流无规则的干扰电压。这个噪声电压折算到运放输入端时，就称为运放输入噪声电压（有时也用噪声电流表示）。对于宽带噪声，普通运放的输入噪声电压有效值约10~20μV。</p>
+<p>6、<strong>差模输入阻抗（也称为输入阻抗）：</strong>差模输入阻抗定义为，运放工作在线性区时，两输入端的电压变化量与对应的输入端电流变化量的比值。差模输入阻抗包括输入电阻和输入电容，在低频时仅指输入电阻。一般产品也仅仅给出输入电阻。采用双极型晶体管做输入级的运放的输入电阻不大于10兆欧；场效应管做输入级的运放的输入电阻一般大于109欧。</p>
+<p>7、<strong>共模输入阻抗：</strong>共模输入阻抗定义为，运放工作在输入信号时（即运放两输入端输入同一个信号），共模输入电压的变化量与对应的输入电流变化量之比。在低频情况下，它表现为共模电阻。通常，运放的共模输入阻抗比差模输入阻抗高很多，典型值在108欧以</p>
+<p>8、<strong>输出阻抗：</strong>输出阻抗定义为，运放工作在线性区时，在运放的输出端加信号电压，这个电压变化量与对应的电流变化量的比值。在低频时仅指运放的输出电阻。这个参数在开环测试。</p>
+<p><strong>四、运算放大器的性能指标</strong></p>
+<p><strong>1、输入失调电压VIO(input offset voltage)</strong> ：输入电压为零时，将输出电压除以电压增益，再加上负号，即为折算到输入端的失调电压。亦即使输出电压为零时在输入端所加的补偿电压。VIO是表征运放内部电路对称性或者反映了输入级差分对管的失配程度，一般Vos约为（1～10）mV，高质量运放Vos在1mV以下。</p>
+<p><strong>2、输入失调电压温漂</strong>：在规定工作温度范围内，输入失调电压随温度的变化量与温度变化量之比值。该参数是指Vos在规定工作范围内的温度系数，是衡量运放温度影响的重要指标。一般情况下约为（10～30）uV&#x2F;摄氏度，高质量的可做&lt;0.5uV&#x2F;C(摄氏度)。</p>
+<p>**3、输入失调电流IIO(input offset current)**：在零输入时，差分输入级的差分对管基极电流之差，II0＝|IB1－IB2|。用于表征差分级输入电流不对称的程度。通常，Ios为（0.5～5）nA，高质量的可低于1nA。</p>
+<p><strong>4、输入失调电流温漂</strong>：在规定工作温度范围内，输入失调电流随温度的变化量与温度变化量之比值。它是指II0在规定工作范围内的温度系数，也是衡量运放受温度影响的重要指标，通常约为（1～50）nA&#x2F;C，高质量的约为几个pA&#x2F;C。</p>
+<p>**5、输入偏置电流IB(input bias current)**：运放两个输入端偏置电流的平均值，确切地说是运算放大器工作在线性区时流入输入端的平均电流。用于衡量差分放大对管输入电流的大小。</p>
+<p>**6、最大差模输入电压 (maximum differential mode input voltage)**：运放两输入端能承受的最大差模输入电压，超过此电压时,差分管将出现反向击穿现象。平面工艺制成的NPN管，其值在5V左右，横向PNP管的Vidmax可达+-30V以上。</p>
+<p>**7、最大共模输入电压 (maximum common mode input voltage)**：在保证运放正常工作条件下，共模输入电压的允许范围。共模电压超过此值时，输入差分对管出现饱和，放大器失去共模抑制能力。</p>
+<p><strong>五、运算放大器的动态技术指标</strong></p>
+<p>1.<strong>开环差模电压放大倍数 (open loop voltage gain) ：</strong>运放在无外加反馈条件下，输出电压与输入电压的变化量之比。</p>
+<p>2.<strong>差模输入电阻 (input resistance) ：</strong>输入差模信号时，运放的输入电阻。为运放开环条件下，从两个差动输入端看进去的动态电阻。</p>
+<p>3.<strong>共模输入电阻 Ric (common mode input resistence)：</strong>它定义为运放两个输入端并联时对地的电阻。对于晶体管作输入级的集成运放来说，Ric通常比Rid高两个数量级左右。采用场效应管，输入级运算放大器Ric和Rid数值相当。</p>
+<p>4.<strong>共模抑制比 (common mode rejection ratio) ：</strong>与差分放大电路中的定义相同，是差模电压增益与共模电压增益之比，常用分贝数来表示。KCMR&#x3D;20lg(Avd &#x2F; Avc ) (dB)。它是衡量输入级差放对称程度及表征集成运放抑制共模干扰信号能力的参数。其值越大越好。通常KCMR约为（70～100）分贝，高质量的可达160分贝。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">Horse Dragon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/">http://example.com/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/03/05/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86-2/" title="自动控制原理(2)"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">自动控制原理(2)</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/20230228212217.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Horse Dragon</div><div class="author-info__description">这是电子菜鸡IT更菜记得马文龙新建立的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/malong15204122805@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://github.com/dut-ma" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/" title="运算放大器参数详解"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="运算放大器参数详解"/></a><div class="content"><a class="title" href="/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/" title="运算放大器参数详解">运算放大器参数详解</a><time datetime="2023-03-07T02:31:31.000Z" title="Created 2023-03-07 10:31:31">2023-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/05/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86-2/" title="自动控制原理(2)"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自动控制原理(2)"/></a><div class="content"><a class="title" href="/2023/03/05/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86-2/" title="自动控制原理(2)">自动控制原理(2)</a><time datetime="2023-03-05T09:59:15.000Z" title="Created 2023-03-05 17:59:15">2023-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/05/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86-1/" title="自动控制原理(1)"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自动控制原理(1)"/></a><div class="content"><a class="title" href="/2023/03/05/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86-1/" title="自动控制原理(1)">自动控制原理(1)</a><time datetime="2023-03-05T02:58:27.000Z" title="Created 2023-03-05 10:58:27">2023-03-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Horse Dragon</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome, Good Luck!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/'
+    this.page.identifier = '/2023/03/07/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/'
+    this.page.title = '运算放大器参数详解'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Valine' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
